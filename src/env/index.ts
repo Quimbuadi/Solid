@@ -3,7 +3,8 @@ import 'dotenv/config';
 
 const envSchema = z.object({
   NODE_ENV: z.enum(['dev', 'production', 'teste']).default('dev'),
-  PORT: z.coerce.number().default(3333)
+  PORT: z.coerce.number().default(3333),
+  DATABASE_URL: z.string(),
 });
 
 //here we have to doing validation
